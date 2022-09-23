@@ -19,7 +19,7 @@ code {
 .section-center { 
   width: 90vw;
   margin: 0 auto;
-  max-width: 35rem;
+  max-width: 50rem;
   margin-top: 8rem;
 }
 
@@ -36,13 +36,12 @@ code {
   justify-content: center;
 }
 
-.edit-btn,
-.delete-btn {
+.list-right {
   background: transparent;
   border-color: transparent;
   cursor: pointer;
   font-size: 1rem;
-  margin: 0 0.1rem;
+  margin: 0.1rem 0.5rem;
   transition: all 0.3s linear;
 }
 
@@ -53,3 +52,10 @@ code {
 .delete-btn{
   color: red;
 }
+
+.completed-task{
+  text-decoration: line-through;
+  color: red;
+}
+
+

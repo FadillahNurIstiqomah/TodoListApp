@@ -1,4 +1,4 @@
-{"tasks" : [
+[
   {
     "id": 1,
     "task": "Nyuci mobil",
@@ -40,5 +40,5 @@
     "task": "Ke rumah Sabrina",
     "complete": false
   }
-]}
+]
  
