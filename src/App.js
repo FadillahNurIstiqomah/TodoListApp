@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from 'react'
+import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Todo } from './components/Todo';
 
@@ -8,7 +8,6 @@ export default class App extends Component {
       itemsToShow: String
     });
   }
-  
   render (){
     // let {items} = this.state;
 

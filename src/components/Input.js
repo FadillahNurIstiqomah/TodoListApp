@@ -11,7 +11,21 @@ export const TodoInput = () => {
     const [isEditing, setIdEditing] = useState(false);
     const [editID, setEditID] = useState(null);
     const [alert, setAlert] = useState({show: false, msg:"", type: ""});
-    const [data, setData] = useState(dataTasks);
+    const [data] = useState(dataTasks);
+
+    const getLocalStorage = () => {
+        let list = localStorage.getItem("list");
+        if(list){
+          return (list = JSON.parse(localStorage.getItem("list")))
+        } else {
+          return [];
+        }
+      }
+    const [local] = useState(getLocalStorage());
+
+      useEffect(() => {
+        localStorage.setItem("list", JSON.stringify(local));
+      }, [local])
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -101,6 +115,7 @@ export const TodoInput = () => {
                                 name={item.task}
                                 checked={item.complete}
                                 type='checkbox'
+                                onClick={handleDoneTask}
                               />
                               <button type='button' className='edit-btn list-right' onClick={() => editItem(<TodoInput/>)}>
                                 <FaEdit/>
